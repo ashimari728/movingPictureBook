@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <title>動く絵本</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".contents").each(function (i, elem) {
+          var contentsPOS = $(elem).offset().top;
+          $(window).on("load scroll resize", function () {
+            var winHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            var showClass = "show";
+            var timing = 100; // 100pxコンテンツが見えたら次のif文がtrue
+            if (scrollTop >= contentsPOS - winHeight + timing) {
+              $(elem).addClass(showClass);
+            } else {
+              $(elem).removeClass(showClass);
+            }
+          });
+        });
+      });
+    </script>
+    <section id="contents">
+      <div id="content01" class="contents">
+        <div id="content01_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="catch">星の銀貨</p>
+            <p class="copy">グリム・ヤーコブ</p>
+          </div>
+        </div>
+      </div>
+      <!-- content01 -->
+      <div id="content02" class="contents">
+        <div id="content02_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              むかし、むかし、小さい女の子がありました。<br />
+              この子には、<br/>おとうさんもおかあさんもありませんでした。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content02 -->
+      <div id="content03" class="contents">
+        <div id="content03_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              たいへんびんぼうでしたから、 しまいには、 <br />
+              もうねるにも寝床ねどこがないようになって、<br />
+              からだにつけたもののほかは、<br/>手にもったパンひとかけきりでした。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content03 -->
+      <div id="content04" class="contents">
+        <div id="content04_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              でも、この子は心のすなおな信心のあつい子でありました。<br />
+              やさしい神さまのお力にだけすがって<br />
+              野原の上をあるいて行きました。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content04 -->
+      <div id="content05" class="contents">
+        <div id="content05_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              すると、そこへ, びんぼうらしい男が出て来て、<br />
+              <div id="anim-box"><img id="image" src="images/stranger.jpg"></div>
+                <button onclick="fire()" type="button">PUSH</button><br/>
+                <p>「ねえ、なにかたべるものをおくれ。<br/>おなかがすいてたまらないよ。」と、<br/>いいました。<br /></p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content05 -->
+      <div id="content06" class="contents">
+        <div id="content06_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              
+              女の子はもっていたパンひとかけのこらず、<br/>
+              その男にやってしまいました。
+              そして、<br/>「どうぞ神さまのおめぐみのありますように。」<br/>と、いのってやって、<br/>またあるきだしました。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content06 -->
+      <div id="content07" class="contents">
+        <div id="content07_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              すると、こどもがひとり泣きながらやって来て、<br />
+              <div id="anim-box1"><img id="image1" src="images/child.jpg"></div>
+              <button onclick="fire1()" type="button">PUSH</button><br/>
+              <p>「あたい、あたまがさむくて、こおりそうなの。なにかかぶるものちょうだい。」と、いいました。</p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content07 -->
+      <div id="content08" class="contents">
+        <div id="content08_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              そこで、女の子は、かぶっていたずきんをぬいで、子どもにやりました。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content08 -->
+      <div id="content09" class="contents">
+        <div id="content09_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              それから、女の子が進むたびに子どもと出会い、<br />
+              子どもに身につけているものを次々とやりました。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content09 -->
+      <div id="content11" class="contents">
+        <div id="content10_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              そのうち、<br/>女の子はある森にたどり着つきました。<br/>
+              すると、寒そうな子供がまた一人出てきました。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content10 -->
+      <div id="content11" class="contents">
+        <div id="content11_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              もうくらくなっていたので、<br />
+              （もうまっくらになっているからだれにもみられやしないでしょう。<br />
+              いいわ、肌着もぬいであげることにしましょう。）と、おもって、<br />
+              とうとう肌着までぬいで、やってしまいました。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content11 -->
+      <div id="content12" class="contents">
+        <div id="content12_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy">
+              さて、それまでしてやって、<br />
+              きれいさっぱりなくなってしまったとき、<br/>
+              たちまち、たかい空の上から、お星さまがばらばらおちて来ました。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content12 -->
+      <div id="content13" class="contents">
+        <div id="content13_bg" class="background"></div>
+          <div class="wrap">
+            <div class="text-box">
+            <p class="copy">
+              しかも、それがまったくの、ちかちかと白銀色はくぎんいろをした、ターレル銀貨でありました。<br />
+            </p>
+        </div>
+      </div>
+    </div>
+
+      <!-- content13 -->
+      <div id="content14" class="contents">
+        <div id="content14_bg" class="background"></div>
+        <div class="wrap">
+          <div class="text-box">
+            <p class="copy"> 
+              女の子は、銀貨をひろいあつめて、 それで一生ゆたかにくらしました。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    <script src = "https://cdn.jsdelivr.net.particles.js/2.0.0/particles.min.js"></script>
+    <script src = "index.js"></script>
+  </body>
+</html>

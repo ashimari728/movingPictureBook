@@ -1,0 +1,135 @@
+p {
+  text-align: center;
+  font-family: "UD デジタル 教科書体 NK-B";
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 100%;
+}
+
+#image1,
+#image {
+  width: 100%;
+  opacity: 0;
+  margin-left: 50%;
+  transform: translateX(-200%);
+  opacity: 0;
+}
+
+@keyframes slide-in-anim {
+  20% {
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-45%);
+  }
+  75% {
+    transform: translateX(-52%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+.ignite {
+  animation: slide-in-anim 1.5s ease-out forwards;
+}
+.background {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: fixed;
+  background-position: center center;
+  opacity: 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.show .background {
+  opacity: 1;
+}
+.contents .wrap {
+  padding: 40vh 0 60vh;
+  position: relative;
+  z-index: 2;
+}
+/* design*/
+#content01_bg {
+  background-image: url(images/IMG_5184.JPG);
+}
+#content02_bg {
+  background-image: url(images/withParentes.jpg);
+}
+#content03_bg {
+  background-image: url(images/skyblue.jpg);
+}
+#content04_bg {
+  background-image: url(images/rr.jpg);
+}
+
+#content05_bg {
+  background-image: url(images/skyblueHill.jpg);
+}
+
+#content06_bg {
+  background-image: url(images/eveningAlone.jpg);
+}
+
+#content07_bg {
+  background-image: url(images/buleHill.jpg);
+}
+
+#content08_bg {
+  background-image: url(images/noHood.jpg);
+}
+#content09_bg {
+  background-image: url(images/blue.png);
+}
+
+#content10_bg {
+  background-image: url(images/forest.jpg);
+}
+
+#content11_bg {
+  background-image: url(images/night.jpg);
+}
+#content12_bg {
+  background-image: url(images/IMG_5184.JPG);
+}
+#content13_bg {
+  background-image: url(images/coinsNoColor.JPG);
+}
+#content14_bg {
+  background-image: url(images/coins.jpg);
+}
+
+#content01 .wrap {
+  background-color: (0, 0, 0, 0.2);
+}
+
+#content02 .wrap {
+  background-color: (0, 0, 0, 0.2);
+}
+#content03 .wrap {
+  background-color: (0, 0, 0, 0.2);
+}
+.text-box {
+  padding: 50px 25px;
+  width: 480px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.text-box .catch {
+  margin: 0 0 10px;
+  font-size: 40px;
+}
+.text-box .copy {
+  margin: 0;
+  line-height: 2;
+}
